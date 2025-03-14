@@ -143,7 +143,7 @@ logistic=LogisticRegressionTrain(X_train,y_train,{"C":10,"penalty":'l2',"solver"
                                                         "class_weight":'balanced',"random_state":42,"max_iter":1000})
 logistic_model=logistic.train()
 
-cross_validation=cross_validation_evaluate_scale.evaluate(logistic_model)
+cross_validation=cross_validation_evaluate.evaluate(logistic_model)
 print(f"Cross-Validation Accuracy Scores: {cross_validation}")
 print(f"Mean Accuracy Scores: {cross_validation.mean()}")
 ```
